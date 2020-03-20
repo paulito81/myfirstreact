@@ -1,10 +1,12 @@
 .game {
     max-width: 500px;
     margin: 0 auto;
+    padding-top: 10px;
 }
 
 .body {
     display: flex;
+    padding-top: 10px;
 }
 
 .help {
@@ -29,6 +31,7 @@
 .star {
     display: inline-block;
     margin: 0 15px;
+    padding-top: 10px;
 }
 
 .star:after {
@@ -53,7 +56,7 @@
 
 .timer {
     color: #666;
-    margin-top: 3px;
+    margin-top: 8px;
     margin-left: 3px;
 }
 
