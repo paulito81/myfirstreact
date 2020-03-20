@@ -27,7 +27,7 @@ const PlayAgain = props => (
     </div>
 );
 
-const StarMatch = () => {
+const Game = (props) => {
     // First lines should hold hooks into the state, hooks into sideeffects.
     const [stars, setStars] = useState(utils.random(1, 9));
     const [availableNums, setAvailableNums] = useState(utils.range(1, 9));
@@ -113,6 +113,14 @@ const StarMatch = () => {
         </div >
     );
 };
+const StarMatch = () => {
+    // mount new game with new ID
+    const [gameId, setGameId] = useState(1);
+    return <Game key = {gameId}
+    startNewGame = {() => setGameId(gameId + 1)}/>;
+}
+
+
 // Color Theme
 const colors = {
     available: 'lightgray',
