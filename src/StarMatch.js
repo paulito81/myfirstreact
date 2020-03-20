@@ -16,15 +16,33 @@ const PlayNumber = props => (
         {props.number}
     </button>
 );
+const PlayAgain = props => {
+    return ( <div className = "game-over" >
+        <button onClick = {
+            props.onClick
+        } > Play Again </button> 
+        </div>
+    );
+};
 
 const StarMatch = () => {
+    // First lines should hold hooks into the state, hooks into sideeffects.
     const [stars, setStars] = useState(utils.random(1, 9));
     const [availableNums, setAvailableNums] = useState(utils.range(1, 9));
     const [candidateNums, setCandidateNums] = useState([]);
           
-    // wrong answers computed
+    // Computation based on State
+    // Compute wrong candidates
     const candidatesAreWrong = utils.sum(candidateNums) > stars;
-
+    // Gameover
+    const gameOver = availableNums.length === 0;
+    // Reset game
+    const resetGame = () => {
+        setStars(utils.random(1, 9));
+        setAvailableNums(utils.range(1, 9));
+        setCandidateNums([]);
+    }
+    
     const numberStatus = (number) => {
         if(!availableNums.includes(number)){
           return 'used';
@@ -56,14 +74,15 @@ const StarMatch = () => {
             setCandidateNums([]);
         }
     }
-  
+    //Deescription of UI based onState and Computation
     return ( 
         <div className = "game" >
         <div className = "help" >
         Pick 1 or more numbers that sum to the number of stars </div> 
         <div className = "body" >
         <div className = "left" > {
-        <StarsDisplay count={stars} />}
+            gameOver ? ( < PlayAgain onClick = { resetGame }/> ) : ( <StarsDisplay count={stars} / >
+        )}
         </div> 
         <div className = "right" >
             {utils.range(1, 9).map(number =>
@@ -72,7 +91,8 @@ const StarMatch = () => {
              status ={numberStatus(number)}
              number = {number} 
              onClick={onNumberClick}
-             /> )} 
+             /> 
+             )} 
         </div> 
         </div > 
         <div className = "timer" > Time Remaining: 10 </div> 
