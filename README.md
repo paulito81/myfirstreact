@@ -1,6 +1,6 @@
 # STARS GAME 
 @This project is my first React Game APP 
-<img width="537" alt="startscreen" src="https://user-images.githubusercontent.com/9897451/77173553-f4685f00-6abf-11ea-91ec-541f41080bae.png">
+<img alt="startscreen" src="https://user-images.githubusercontent.com/9897451/77173553-f4685f00-6abf-11ea-91ec-541f41080bae.png">
 
 A simple game wher you try to push the correct numbers within the timelimit.
 This game is produced after a tutorial.
