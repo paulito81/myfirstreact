@@ -1,5 +1,6 @@
-This project is my first React APP 
 # STAR GAME 
+@This project is my first React APP 
+
 A simple game wher you try to push the correct numbers within the timelimit.
 This game is produced after a tutorial.
 
