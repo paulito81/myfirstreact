@@ -9,6 +9,6 @@ This game is produced after a tutorial.
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-
+<img width="521" alt="gameplay" src="https://user-images.githubusercontent.com/9897451/77173286-8f146e00-6abf-11ea-8623-6440c201a2c1.png">
 
 @Created by Paul A Hasfjord
