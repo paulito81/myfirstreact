@@ -26,7 +26,8 @@ const PlayAgain = props => (
       style={{ color: props.gameStatus === "lost" ? "red" : "green" }}>
       {props.gameStatus === "lost" ? "Game Over" : "You Won!"}
     </div>
-    <button onClick={props.onClick}>Play Again</button>
+    <button className="playagain" 
+    onClick={props.onClick}>Play Again</button>
   </div>
 );
 // custom hook initaliserer state,
@@ -109,6 +110,7 @@ const Game = (props) => {
   //Description of UI based onState and Computation
   return (
     <div className="game">
+      <div className="game-header">Stars Game</div>
       <div className="help">
         Klikk 1 eller flere tall som summerer antall stjerner på skjermen!{" "}
       </div>

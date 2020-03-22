@@ -2,11 +2,13 @@
     max-width: 500px;
     margin: 0 auto;
     padding-top: 10px;
+    
 }
 
 .body {
     display: flex;
     padding-top: 10px;
+    background-color: floralwhite;
 }
 
 .help {
@@ -59,9 +61,20 @@
     margin-top: 8px;
     margin-left: 3px;
 }
-
 .game-done .message {
-    font-size: 250%;
+    font-size: 200%;
     font-weight: bold;
-    margin: 15px;
+    margin-top: 50px;
+}
+
+.game-header {
+     color: rgb(123, 145, 10);
+     font-size: 250%;
+     font-weight: bold;
+     margin: 15px;
+}
+.playagain {
+    margin-top: 50px;
+    font-size: 100%;
+    font-weight: bold;
 }
