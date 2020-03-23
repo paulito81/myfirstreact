@@ -12,6 +12,7 @@
 }
 
 .help {
+    font-size: 16px;
     color: #666;
     margin: 10px;
     text-align: center;
@@ -58,8 +59,23 @@
 
 .timer {
     color: #666;
-    margin-top: 8px;
+    font-size: 16px;
+    margin-top: 10px;
     margin-left: 3px;
+}
+.timer2 {
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-left: 3px;
+    animation:blinkingText 1.2s infinite;
+}
+@keyframes blinkingText{
+    0%{     color: red;    }
+    49%{    color: red; }
+    60%{    color: transparent; }
+    99%{    color:transparent;  }
+    100%{   color: #000;    }
 }
 .game-done .message {
     font-size: 200%;

@@ -11,9 +11,11 @@ const useGameState = () => {
   const [availableNums, setAvailableNums] = useState(utils.range(1, 15));
   const [candidateNums, setCandidateNums] = useState([]);
   const [secondsLeft, setSecondsLeft] = useState(20);
-
-  useEffect(() => {
+  useEffect((props) => {
     if (secondsLeft > 0 && availableNums.length > 0) {
+      if(secondsLeft < 10){
+        
+      }
       const timerId = setTimeout(() => {
         setSecondsLeft(secondsLeft - 1);
       }, 1000);
@@ -55,8 +57,6 @@ const Game = (props) => {
   const gameStatus =
     availableNums.length === 0 ? "won" : secondsLeft === 0 ? "lost" : "active";
   
-  
-
   const numberStatus = number => {
     if (!availableNums.includes(number)) {
       return "used";
@@ -108,7 +108,7 @@ const Game = (props) => {
           ))}
         </div>
       </div>
-      <div className="timer"> Time Remaining: {secondsLeft} </div>
+      <div class="timer" className={secondsLeft > 10 ? 'timer' : 'timer2' }> Tid igjen: {secondsLeft} </div>
     </div>
   );
 };
