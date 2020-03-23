@@ -56,7 +56,6 @@
     outline: none;
     border: thin solid #ddd;
 }
-
 .timer {
     color: #666;
     font-size: 16px;
@@ -68,7 +67,7 @@
     font-weight: bold;
     margin-top: 10px;
     margin-left: 3px;
-    animation:blinkingText 1.2s infinite;
+    animation:blinkingText linear alternate 1.5s;
 }
 @keyframes blinkingText{
     0%{     color: red;    }

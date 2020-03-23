@@ -108,7 +108,7 @@ const Game = (props) => {
           ))}
         </div>
       </div>
-      <div class="timer" className={secondsLeft > 10 ? 'timer' : 'timer2' }> Tid igjen: {secondsLeft} </div>
+      <div className={secondsLeft > 10 ? 'timer' : 'timer2' }>Tid igjen: {secondsLeft} </div>
     </div>
   );
 };
