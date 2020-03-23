@@ -1,12 +1,12 @@
 import React from 'react';
 // import logo from './logo.svg';
 import './App.css';
-import StarMatch from './StarMatch';
+import Game from './Game';
 
 function App() {
   return (
     <div className="App">
-      <StarMatch />
+      <Game />
     </div>
   );
 }
